@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "glowing-ores",
+	"version": "${version}",
+	"name": "glowing-ores",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/glowing-ores/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.fabric.glow.Glowingores"
+		],
+		"client": [
+			"dev.fabric.glow.GlowingoresClient"
+		],
+		"fabric-datagen": [
+			"dev.fabric.glow.GlowingoresDataGenerator"
+		]
+	},
+	"mixins": [
+		"glowing-ores.mixins.json",
+		{
+			"config": "glowing-ores.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
